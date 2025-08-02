@@ -4,46 +4,62 @@
   <meta charset="UTF-8" />
   <title>Leon Huang - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 
 </head>
 <body>
-  <h1>Leon Huang</h1>
-  
-  <p>I am a graduated Computer Science student with a strong interest in both technology and design. With a background in programming, graphic design, and video editing, I enjoy creating practical, visually appealing solutions that connect with people. I’m known for my ability to work well under pressure and handle challenging situations calmly and professionally. I thrive in team environments, communicate effectively with people from diverse backgrounds, and take pride in delivering work that meets high standards, even within tight deadlines. Driven, adaptable, and creative, I’m always eager to learn new skills and tackle new challenges.</p>
-  <h3>
-  <a href="LH.pdf" download>
-    My CV
-  </a>
-</h3>
-  
-  <h2>My Work</h2>
-  <h3>Design (Portrait)</h3>
-    <div class="grid">
+  <header>
+    <h1>Leon Huang</h1>
+    <p class="tagline">Computer Science & Design • Auckland, NZ</p>
+  </header>
+
+  <section class="intro">
+    <p>I am a graduated Computer Science student with a strong interest in both technology and design. With a background in programming, graphic design, and video editing, I enjoy creating practical, visually appealing solutions that connect with people. I’m known for my ability to work well under pressure and handle challenging situations calmly and professionally. I thrive in team environments, communicate effectively with people from diverse backgrounds, and take pride in delivering work that meets high standards, even within tight deadlines. Driven, adaptable, and creative, I’m always eager to learn new skills and tackle new challenges.</p>
+    <a class="button" href="LH.pdf" download>Download My CV</a>
+  </section>
+
+  <section>
+    <h2>My Work</h2>
+
+    <h3>Design (Portrait)</h3>
+    <div class="grid fade-in">
       <img src="design/arcade_1.jpg" alt="Arcade Poster" />
       <img src="design/lol_2.jpg" alt="LoL Poster 1" />
       <img src="design/val_2.jpg" alt="Valorant Design" />
       <img src="design/lol_4.jpg" alt="LoL Poster 2"/>
       <img src="design/auec_3.jpg" alt="Auckland Uni Esports Club Rep Team"/>
     </div>
-  <h3>Design (Landscape)</h3>
-    <div class="grid">
+
+    <h3>Design (Landscape)</h3>
+    <div class="grid fade-in">
       <img src="design/lol_1.jpg" alt="LoL Poster 1" />
       <img src="design/val_1.jpg" alt="Valorant Design" />
       <img src="design/lol_3.jpg" alt="LoL Poster 2"/>
       <img src="design/auec_2.jpg" alt="Auckland Uni Esports Club Rep Team"/>
     </div>
-  <h3>Projects</h3>
-  <p>    The UoA Your Way project is a dual-platform system designed to support international postgraduate students applying to the University of Auckland via a new offshore-to-onshore study pathway. It features a mobile app for students and a web-based content management system (CMS) for staff. The app helps students explore programmes, learn about university life and New Zealand culture, and stay engaged during the application process. The CMS allows staff with minimal technical experience to easily manage and update content. Together, the platforms aim to improve engagement, and offer a more accessible and personalised experience for students.
-</p>
-  <p>
-    <a href="https://github.com/charoncs/UOA-Your-Way" target="CS Capstone UOA Your Way">
-      UOA: Your Way
-    </a>
-  </p>
+  </section>
 
-    <div class="grid">
-      
-        <img src="projects/cs399_1.jpg" alt="UOA: Your Way Project" />
+  <section>
+    <h2>Projects</h2>
+    <p>The UoA Your Way project is a dual-platform system designed to support international postgraduate students applying to the University of Auckland via a new offshore-to-onshore study pathway. It features a mobile app for students and a web-based content management system (CMS) for staff. The app helps students explore programmes, learn about university life and New Zealand culture, and stay engaged during the application process. The CMS allows staff with minimal technical experience to easily manage and update content.</p>
+    <p>
+      <a class="link" href="https://github.com/charoncs/UOA-Your-Way" target="_blank">
+        View UOA: Your Way on GitHub ↗
+      </a>
+    </p>
+    <div class="grid fade-in">
+      <img src="projects/cs399_1.jpg" alt="UOA: Your Way Project" />
     </div>
+  </section>
+
+  <footer>
+    <p>Made by Leon Huang</p>
+    <p>
+      <a href="mailto:vaxoverleon@gmail.com">Email</a> • 
+      <a href="https://www.linkedin.com/in/leon-huang-600602315/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
 </body>
 </html>
