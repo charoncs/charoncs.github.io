@@ -1,66 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leon Huang - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-
 </head>
-<body>
-  <header>
-    <h1>Leon Huang</h1>
-    <p class="tagline">Computer Science & Design • Auckland, NZ</p>
+<body class="font-questrial bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-primary text-white py-12 text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Leon Huang</h1>
+      <p class="text-xl md:text-2xl opacity-90">Computer Science & Design • Auckland, NZ</p>
+    </div>
   </header>
 
-  <section class="intro">
-    <p>I am a graduated Computer Science student with a strong interest in both technology and design. With a background in programming, graphic design, and video editing, I enjoy creating practical, visually appealing solutions that connect with people. I’m known for my ability to work well under pressure and handle challenging situations calmly and professionally. I thrive in team environments, communicate effectively with people from diverse backgrounds, and take pride in delivering work that meets high standards, even within tight deadlines. Driven, adaptable, and creative, I’m always eager to learn new skills and tackle new challenges.</p>
-    <a class="button" href="2025CV.pdf" download>Download My CV</a>
-  </section>
-
-  <section>
-    <h2>My Work</h2>
-
-    <h3>Design (Portrait)</h3>
-    <div class="grid fade-in">
-      <img src="design/arcade_1.jpg" alt="Arcade Poster" />
-      <img src="design/lol_2.jpg" alt="LoL Poster 1" />
-      <img src="design/val_2.jpg" alt="Valorant Design" />
-      <img src="design/lol_4.jpg" alt="LoL Poster 2"/>
-      <img src="design/auec_3.jpg" alt="Auckland Uni Esports Club Rep Team"/>
+  <!-- Tab Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-40">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center space-x-8">
+        <button id="aboutTab" class="tab-button active py-4 px-2 border-b-2 border-primary text-primary font-medium transition-all duration-300 transform hover:scale-105">
+          About Me
+        </button>
+        <button id="designTab" class="tab-button py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium transition-all duration-300 transform hover:scale-105">
+          Design Portfolio
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <h3>Design (Landscape)</h3>
-    <div class="grid fade-in">
-      <img src="design/lol_1.jpg" alt="LoL Poster 1" />
-      <img src="design/val_1.jpg" alt="Valorant Design" />
-      <img src="design/lol_3.jpg" alt="LoL Poster 2"/>
-      <img src="design/auec_2.jpg" alt="Auckland Uni Esports Club Rep Team"/>
+  <main class="container mx-auto px-4 py-8 min-h-screen">
+    <!-- About Me Section -->
+    <section id="aboutSection" class="tab-content active">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-xl p-8 mb-8 transform transition-all duration-500 ease-out">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center border-b-2 border-primary pb-4">About Me</h2>
+          <div class="space-y-6">
+            <p class="text-lg leading-relaxed text-gray-700">
+              I am a graduated Computer Science student with a strong interest in both technology and design. 
+              With a background in programming, graphic design, and video editing, I enjoy creating practical, 
+              visually appealing solutions that connect with people. I'm known for my ability to work well under 
+              pressure and handle challenging situations calmly and professionally.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-700">
+              I thrive in team environments, communicate effectively with people from diverse backgrounds, 
+              and take pride in delivering work that meets high standards, even within tight deadlines. 
+              Driven, adaptable, and creative, I'm always eager to learn new skills and tackle new challenges.
+            </p>
+          </div>
+          <div class="text-center mt-8">
+            <a id="cvButton" href="2025CV.pdf" download class="btn-primary inline-block transform hover:scale-105 transition-transform duration-300">
+              Download My CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Section -->
+    <section id="designSection" class="tab-content hidden">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center border-b-2 border-primary pb-4">Design Portfolio</h2>
+        
+        <!-- Portrait Designs -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-semibold text-gray-700 mb-8 text-center">Portrait Designs</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/arcade_1.jpg" alt="Arcade Poster" class="design-image w-full h-80 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/lol_2.jpg" alt="LoL Poster 1" class="design-image w-full h-80 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/val_2.jpg" alt="Valorant Design" class="design-image w-full h-80 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/lol_4.jpg" alt="LoL Poster 2" class="design-image w-full h-80 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/auec_3.jpg" alt="Auckland Uni Esports Club Rep Team" class="design-image w-full h-80 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Landscape Designs -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-semibold text-gray-700 mb-8 text-center">Landscape Designs</h3>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/lol_1.jpg" alt="LoL Poster 1" class="design-image w-full h-64 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/val_1.jpg" alt="Valorant Design" class="design-image w-full h-64 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/lol_3.jpg" alt="LoL Poster 2" class="design-image w-full h-64 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="design/auec_2.jpg" alt="Auckland Uni Esports Club Rep Team" class="design-image w-full h-64 object-cover rounded-xl shadow-lg cursor-pointer" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Project -->
+        <div class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-500">
+          <h3 class="text-3xl font-semibold text-gray-700 mb-6 text-center">UoA Your Way Project</h3>
+          <div class="space-y-4 mb-6">
+            <p class="text-lg leading-relaxed text-gray-700">
+              The UoA Your Way project is a dual-platform system designed to support international postgraduate students 
+              applying to the University of Auckland via a new offshore-to-onshore study pathway. It features a mobile app 
+              for students and a web-based content management system (CMS) for staff.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-700">
+              The app helps students explore programmes, learn about university life and New Zealand culture, and stay 
+              engaged during the application process. The CMS allows staff with minimal technical experience to easily 
+              manage and update content.
+            </p>
+          </div>
+          <div class="text-center mb-8">
+            <a href="https://github.com/charoncs/UOA-Your-Way" target="_blank" 
+               class="btn-primary inline-block bg-gray-700 hover:bg-gray-800 transform hover:scale-105 transition-transform duration-300">
+              View UOA: Your Way on GitHub ↗
+            </a>
+          </div>
+          <div class="flex justify-center">
+            <div class="design-card transform transition-all duration-500 hover:scale-105">
+              <img src="projects/cs399_1.jpg" alt="UOA: Your Way Project" 
+                   class="design-image max-w-md w-full rounded-xl shadow-lg cursor-pointer" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">Made by Leon Huang</p>
+      <p>
+        <a href="mailto:vaxoverleon@gmail.com" class="text-primary hover:text-blue-300 transition-colors mx-2">
+          Email
+        </a> • 
+        <a href="https://www.linkedin.com/in/leon-huang-600602315/" target="_blank" 
+           class="text-primary hover:text-blue-300 transition-colors mx-2">
+          LinkedIn
+        </a>
+      </p>
     </div>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-    <p>The UoA Your Way project is a dual-platform system designed to support international postgraduate students applying to the University of Auckland via a new offshore-to-onshore study pathway. It features a mobile app for students and a web-based content management system (CMS) for staff. The app helps students explore programmes, learn about university life and New Zealand culture, and stay engaged during the application process. The CMS allows staff with minimal technical experience to easily manage and update content.</p>
-    <p>
-      <a class="link" href="https://github.com/charoncs/UOA-Your-Way" target="_blank">
-        View UOA: Your Way on GitHub ↗
-      </a>
-    </p>
-    <div class="grid fade-in">
-      <img src="projects/cs399_1.jpg" alt="UOA: Your Way Project" />
-    </div>
-  </section>
-
-  <footer>
-    <p>Made by Leon Huang</p>
-    <p>
-      <a href="mailto:vaxoverleon@gmail.com">Email</a> • 
-      <a href="https://www.linkedin.com/in/leon-huang-600602315/" target="_blank">LinkedIn</a>
-    </p>
   </footer>
+
+  <script type="module" src="dist/index.js"></script>
 </body>
 </html>

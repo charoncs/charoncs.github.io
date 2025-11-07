@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/* Custom components */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-4 rounded-xl font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .tab-content {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  
+  .tab-content.active {
+    @apply block;
+  }
+  
+  .tab-content:not(.active) {
+    @apply hidden;
+  }
+  
+  .design-card {
+    @apply opacity-0 transform translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .design-card.visible {
+    @apply opacity-100 transform translate-y-0;
+  }
+  
+  .tab-button.active {
+    @apply text-primary border-primary;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
