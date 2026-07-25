@@ -139,3 +139,17 @@ footer a:hover {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.button-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center; /* Optional */
+    flex-wrap: wrap;         /* Allows stacking on smaller screens */
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px; /* Ensures both buttons are the same width */
+}
